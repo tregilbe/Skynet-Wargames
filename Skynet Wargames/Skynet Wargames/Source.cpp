@@ -7,6 +7,9 @@ using namespace std;
 
 int main()
 {
+	
+	rerun:
+
 	srand(static_cast<unsigned int>(time(0)));
 	// seed random number generator
 
@@ -210,6 +213,17 @@ int main()
 	cout << "The Binary AI found the target in " << AI_Binary_Number_Of_Tries << " attempts." << endl;
 	cout << "The Linear AI found the target in " << AI_Linear_Number_Of_Tries << " attempts." << endl;
 	cout << "The Random AI found the target in " << AI_random_Number_Of_Tries << " attempts." << endl;
+
+	cout << "\n\nWould you like to try again? (Y/N)\n\n";
+
+	string yorn;
+	cin >> yorn;
+
+	if (yorn == "Y" || yorn == "y")
+		goto rerun;
+
+	else
+		return 0;
 
 	return 0;
 }
